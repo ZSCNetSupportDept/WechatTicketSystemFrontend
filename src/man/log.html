@@ -1,0 +1,35 @@
+<!-- @extend ../part/wrap/head.part.html -->处理记录<!-- @endextend -->
+
+<!-- @include ../part/common_js_loader.part.html -->
+<script>
+	//加载基本函数库,并且验证微信
+	window.allowDesktop = {};
+	NMJsLoader('../cdn/functions.js', 'functions');
+</script>
+
+<!-- @include ../part/common_head_style.part.html -->
+
+<!-- @extend ../part/wrap/headbody_man.part.html -->
+	<!--Body最开头的内容-->
+	<!-- @include part/log/dlg_browser_history.part.html -->
+<!-- @endextend -->
+
+<!-- @extend ../part/wrap/body_head.part.html --><span id="text_title">处理记录</span><!-- @endextend -->
+<!-- @extend ../part/wrap/body_desc.part.html --><span id="text_brief">查询指定时间段的网维成员处理报修的记录</span><!-- @endextend -->
+
+<!-- 表单开始 -->
+<input type="hidden" id="token" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
+
+<!-- @include part/log/body.part.html -->
+
+<!-- @extend ../part/wrap/tail.part.html -->
+<script>
+	window.NMLazyJs = [
+		['zepto', '../cdn/zepto.min.js'],
+		['userfield', '../cdn/userfield.js'],
+		['lytable','../cdn/lyTableAll.min.js'],
+		['man_log','js/log.js'],
+	];
+</script>
+<!-- @include ../part/man_tail_script.part.html -->
+<!-- @endextend -->

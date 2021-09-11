@@ -1,0 +1,56 @@
+<!-- @extend ../part/wrap/head.part.html -->查询<!-- @endextend -->
+<!-- @include ../part/common_js_loader.part.html -->
+
+	<script>
+	//加载基本函数库,并且验证微信
+	//	window.allowDesktop={};
+	NMJsLoader('../cdn/functions.js','functions');
+	</script>
+
+<!-- @include ../part/common_head_style.part.html -->
+<link rel="stylesheet" id="style_lytable" href="../cdn/lytable.min.css?<!-- @echo TIME-->"></link>
+<!--<script>NMLoadCSS(document.getElementById(style_lytable),'../cdn/lytable.min.css','lytable');</script>-->
+
+<!-- @extend ../part/wrap/headbody.part.html -->
+	<!-- Body最开头的内容 -->
+	
+	<!-- @include-static part/list/toast_loading.part.html  -->
+	<!-- @include-static part/list/dlg_info.part.html  -->
+	
+<!-- @endextend -->
+	
+<!-- @extend ../part/wrap/body_head.part.html -->报修记录<!-- @endextend -->
+<!-- @extend ../part/wrap/body_desc.part.html -->你最近五单报修记录(点击可以查看处理结果)<!-- @endextend -->
+
+
+<!-- 表单开始 -->
+<input type="hidden" id="token" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
+
+<!--Body-->
+<table class="table" id="tb_result" style="width: 98%;margin: 0 auto;"></table>
+
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+        	<i class="weui_icon_info_circle"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+        <p style="padding: .3em 0 0 .5em;color: #888;font-size: .8em;">
+            	由于环(bo)保(kuan)原因.<br/>数据库只会保留你最近五单的报修记录
+        </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- @extend ../part/wrap/tail.part.html -->
+	<script>
+	window.NMLazyJs=[
+		['zepto','../cdn/zepto.min.js'],
+		['userfield','../cdn/userfield.js'],
+		['lytable','../cdn/lyTableAll.min.js'],
+		['user_list','js/list.js'],
+	];
+	</script>
+	<!-- @include ../part/usr_tail_script.part.html -->
+<!-- @endextend -->

@@ -1,0 +1,66 @@
+.point {
+	width: .7em;
+	height: .7em;
+	border-radius: .7em;
+	margin: .2em .5em;
+}
+
+.p_fg {
+	z-index: 200;
+	position: relative;
+	border-bottom: thin solid #ddd;
+}
+
+.p_bg {
+	z-index: 99;
+	position: absolute;
+	left: 1.75em;
+	width: 1px;
+	height: 0;
+	background-color: #aaa;
+}
+
+.p_del {
+	background-color: #ebccd1;
+}
+
+
+/*红*/
+
+.p_done {
+	background-color: #d6e9c6;
+}
+
+
+/*绿*/
+
+.p_continue {
+	background-color: #faebcc;
+}
+
+
+/*黄*/
+
+.p_start {
+	background-color: #bce8f1;
+}
+
+
+/*蓝*/
+
+.ti_name {
+	color: #777;
+}
+
+.ti_status {
+	font-size: 1.2em;
+}
+
+.ti_remark {
+	font-size: .8em;
+	color: #999;
+}
+
+.ti_time {
+	text-align: right;
+}

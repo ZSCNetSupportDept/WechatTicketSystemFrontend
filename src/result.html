@@ -1,0 +1,42 @@
+<!-- @extend part/wrap/head.part.html -->结果<!-- @endextend -->
+	
+	<!-- head内容(title之后的内容) -->
+	
+	<base href="<!-- @echo VERSION -->/cdn" />
+	
+	<!-- @include part/common_js_loader.part.html -->
+	<script>
+	//加载基本函数库,并且验证微信
+	window.allowDesktop={};
+	NMJsLoader('../cdn/functions.js','functions');
+	</script>
+	
+<!-- @include part/common_head_style.part.html -->
+<style>body{overflow: hidden;}</style>
+	
+<!-- @extend part/wrap/headbody_result.part.html -->
+	<!-- Body最开头的内容 -->
+<!-- @endextend -->
+	
+    <div class="weui_icon_area">
+    	<i id="icon_main" class="weui_icon_msg"></i></div>
+    <div class="weui_text_area">
+        <h2 id="text_title" class="weui_msg_title"><!--标题--></h2>
+        <p id="text_brief" class="weui_msg_desc"><!--简介--></p>
+    </div>
+    <div class="weui_opr_area">
+        <p class="weui_btn_area">
+            <a id="btn_ok" href="javascript:;" class="weui_btn hide">完成</a>
+        </p>
+    </div>
+	
+<!-- @extend part/wrap/tail_fixed.part.html -->
+	<!-- body尾部的脚本-->
+	<script>
+		window.NMLazyJs=[
+			['page_result','../page_result/result.js'],
+		];
+	</script>
+	<!-- @include part/result_tail_script.part.html -->
+	<!-- include-static page_result/egg_loader.part.html -->
+<!-- @endextend -->

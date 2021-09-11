@@ -1,0 +1,7 @@
+.doge{width: 80px;position: absolute;z-index: 1000;top: -100px;
+border-radius: 80px;
+animation: dogee 2000ms cubic-bezier(1, 1, 0, 0);
+-webkit-animation: dogee 2000ms cubic-bezier(1, 1, 0, 0);
+}
+@keyframes dogee{0%{top: 10px;}100%{top: 800px;}}
+@-webkit-keyframes dogee{0%{top: 10px;}100%{top: 800px;}}

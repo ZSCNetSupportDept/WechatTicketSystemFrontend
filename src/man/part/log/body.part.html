@@ -1,0 +1,46 @@
+<!-- @include ../../../part/man_backhome.part.html -->
+
+<div class="weui_cells_title">
+	不输入选项就表示<b>今天</b>
+</div>
+<div class="weui_cells weui_cells_form" style="padding: 0;">
+	<div class="weui_cell">
+		<div class="weui_cell_hd">
+			<label style="width: 4.5em;" class="weui_label">起始日期</label>
+		</div>
+		<div class="weui_cell_bd weui_cell_primary">
+			<input class="weui_input" type="date" id="date_start">
+		</div>
+	</div>
+	<div class="weui_cell">
+		<div class="weui_cell_hd">
+			<label style="width: 4.5em;" for="" class="weui_label">结束日期</label>
+		</div>
+		<div class="weui_cell_bd weui_cell_primary">
+			<input class="weui_input" type="date" id="date_stop">
+		</div>
+	</div>
+</div>
+<div class="weui_cells weui_cells_access" style="margin-top: 0;">
+	<a id="btn_query" class="weui_cell" onclick="log_onQueryBtnClick();">
+		<!--<div class="weui_cell_hd"><i class="weui_icon_info_circle"></i></div>-->
+		<div class="weui_cell_bd weui_cell_primary">
+			<p style="padding-top: 0.3em;text-align: center;">查询</p>
+		</div>
+		<div class="weui_cell_ft"></div>
+	</a>
+</div>
+
+<!--<div style="width: 100%;max-width: 800px;margin: 0 auto;">-->
+<iframe id="if_browser" onload="try{log_resizeLogBrowser();}catch(e){}" style="width:100%;border:none;" scrolling="no">
+</iframe>
+<!--</div>-->
+<!-- 主显示区 -->
+
+<div id="div_page">
+	<div id="div_last_page" class="hide" style="width: 50%; float: left;">
+		<a href="javascript:;" class="weui_btn weui_btn_plain_default">上一页</a>
+	</div>
+	<a id="next_page" class="hide" href="javascript:;" class="weui_btn weui_btn_plain_primary">下一页</a>
+	<div style="clear: none;"></div>
+</div>

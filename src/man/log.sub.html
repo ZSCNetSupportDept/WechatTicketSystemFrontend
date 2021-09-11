@@ -1,0 +1,31 @@
+<!-- @extend ../part/wrap/head.part.html -->记录操作历史(子页面)<!-- @endextend -->
+
+<!-- @include ../part/common_js_loader.part.html -->
+<script>
+	//加载基本函数库,并且验证微信
+	window.allowDesktop = {};
+	NMJsLoader('../cdn/functions.js', 'functions');
+</script>
+
+<!-- @include ../part/common_head_style.part.html -->
+<!--加载lytable样式表-->
+<link id="style_log_sub" rel="stylesheet" href="css/log.sub.css?<!-- @echo TIME-->"></link>
+<!--<script>NMLoadCSS(style_log_sub,'css/log.sub.css','log_sub');</script>-->
+
+
+<!-- @include ../part/wrap/headbody_sub.part.html -->
+
+	<input type="hidden" id="token" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
+
+	<!-- @include part/log.sub/body.part.html -->
+
+	<script>
+		window.NMLazyJs = [
+			['zepto', '../cdn/zepto.min.js'],
+			['userfield', '../cdn/userfield.js'],
+			['man_log_sub','js/log.sub.js'],
+		];
+	</script>
+	<!-- @include ../part/result_tail_script.part.html -->
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- @extend ../part/wrap/head.part.html -->网维后台
+<!-- @endextend -->
+
+<!-- @include ../part/common_js_loader.part.html -->
+<script>
+	//加载基本函数库,并且验证微信
+	window.allowDesktop = {};
+	NMJsLoader('../cdn/functions.js', 'functions');
+	//放在前面加载是因为需要在SolaToken验证之前去绑定验证完成的回调函数去显示具有指定权限的用户显示的内容
+	NMJsLoader('js/home.js', 'man_main');
+</script>
+
+<!-- @include ../part/common_head_style.part.html -->
+
+<!-- @extend ../part/wrap/headbody.part.html -->
+<!-- @endextend -->
+
+<!-- @extend ../part/wrap/body_head.part.html -->后台管理
+<!-- @endextend -->
+<!-- @extend ../part/wrap/body_desc.part.html -->
+<span id="homeDescTxt" style="color: #D33131;">报修千万条，安全第一条<br>修网不规范，用户泪两行</br></span>
+<!-- @endextend -->
+
+<!-- 表单开始 -->
+<input type="hidden" id="token" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
+
+<!-- @include part/home/body.part.html -->
+
+<!-- @extend ../part/wrap/tail.part.html -->
+<script>
+	window.NMLazyJs = [
+		['zepto', '../cdn/zepto.min.js'],
+	];
+</script>
+<!-- @include ../part/man_tail_script.part.html -->
+<!-- @endextend -->

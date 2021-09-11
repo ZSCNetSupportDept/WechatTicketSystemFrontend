@@ -1,0 +1,27 @@
+<script>
+//Js文件加载器
+//jsName==undefine	表示不缓存
+//onlyCache==true	表示只缓存不执行(默认执行)
+function NMJsLoader(jsPath,jsName,onlyCache){
+	jsName = undefined;//TODO Debug Mode
+	var check = '<!-- @echo TIME -->';
+	var lp = 'zsxy_nm_cache_';
+	if(jsName && localStorage){
+		var cache = localStorage.getItem(lp+jsName);
+		if(cache){
+			var obj = JSON.parse(cache);
+			if(check == obj.check)
+				return onlyCache || (console.log('使用缓存:'+jsName),eval(obj.script));
+		}
+	}
+	var xhr = new XMLHttpRequest();
+    xhr.open("get",jsPath+'?'+check, false);//console.clear();
+    xhr.send();
+    if(xhr.status==200){
+    	var obj = {'check':check,'script':xhr.responseText};
+    	if(jsName)localStorage.setItem(lp+jsName,JSON.stringify(obj));
+    	return onlyCache || eval(obj.script);
+    }
+    alert('页面加载出错,指定文件无法被下载!\n'+jsPath);
+}
+</script>

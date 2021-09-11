@@ -1,0 +1,52 @@
+<!-- 操作对话框 -->
+<div class="weui_dialog_alert hide" id="dlg_op">
+	<div class="weui_mask"></div>
+	<div class="weui_dialog">
+		<div class="weui_dialog_hd" style="padding-top: .5em;">
+			<strong class="weui_dialog_title" id="dlg_op_title" style="float: left;margin: .3em 0 0 1em;">操作(｀･д･´) </strong>
+			<button onclick="$('#dlg_op').hide();showTicketTrack(nowOpObj.id);" class="weui_btn weui_btn_mini weui_btn_default" style="padding: .3em 2em;margin-right: 1em;float: right;">操作历史</button>
+			<div class="fix_float"></div>
+		</div>
+		<div class="weui_dialog_bd">
+			<div class="weui_cells">
+				<div class="weui_cell weui_cell_warn">
+					<div class="weui_cell_hd">
+						<label class="weui_label" style="width: 4.6em;">维修简述</label>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<input class="weui_input" type="text" placeholder="没人可不填" id="text_op_brief" style="color: #333;" />
+					</div>
+				</div>
+			</div>
+			<div id="dlg_op_btns" style="text-align: left;">
+				<div class="weui_cells_title" style="text-align: left;">已解决状态</div>
+				<div class="weui_cells weui_cells_access">
+					<a class="weui_cell" onclick="onOpActionBtnClick(9);">
+						<div class="weui_cell_bd weui_cell_primary">
+							<p style="color: #5CB85C;">问题解决</p>
+						</div>
+						<div class="weui_cell_ft"></div>
+					</a>
+				</div>
+				<div class="weui_cells_title" style="text-align: left;">未解决状态</div>
+				<div class="weui_cells weui_cells_access">
+					<a class="weui_cell" onclick="onOpActionBtnClick(2);">
+						<div class="weui_cell_bd weui_cell_primary">
+							<p style="color: #5BC0DE;">推迟解决</p>
+						</div>
+						<div class="weui_cell_ft">人不在/时间不足</div>
+					</a>
+					<a class="weui_cell" onclick="onOpActionBtnClick(4);">
+						<div class="weui_cell_bd weui_cell_primary">
+							<p style="color: #D9534F;">无法解决</p>
+						</div>
+						<div class="weui_cell_ft">记得上报哦~</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="weui_dialog_ft">
+			<a id="btn_op_cancel" href="javascript:;" class="weui_btn_dialog default">取消</a>
+		</div>
+	</div>
+</div>

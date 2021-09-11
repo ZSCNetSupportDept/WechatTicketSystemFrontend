@@ -1,0 +1,18 @@
+<!--选择运营商的用户ID-->
+<div id="as_all" class="hide">
+	<div class="weui_mask_transition" id="as_mask" style="display: none;"
+		onclick="add_hideAS();"></div>
+    <div class="weui_actionsheet" id="as_body">
+        <div class="weui_actionsheet_menu">
+            <div class="weui_actionsheet_cell" onclick="add_onASClick('100104',this);"
+            	>联通工单(香晖)</div>
+            <div class="weui_actionsheet_cell" onclick="add_onASClick('100864',this);"
+            	>移动工单(香晖)</div>
+            <div class="weui_actionsheet_cell" onclick="add_onASClick('100865',this);"
+            	>移动工单(凤翔片区)</div>
+        </div>
+        <div class="weui_actionsheet_action">
+            <div class="weui_actionsheet_cell" onclick="add_hideAS();">取消</div>
+        </div>
+    </div>
+</div>

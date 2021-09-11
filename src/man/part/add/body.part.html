@@ -1,0 +1,69 @@
+<!-- @include ../../../part/man_backhome.part.html -->
+
+<!--用户信息-->
+<div>
+	<div class="weui_cells_title">添加信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div id="cell_sid" class="weui_cell">
+			<div class="weui_cell_hd">
+				<label style="width: 4.5em;" class="weui_label">学号</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="sid" class="weui_input" type="text" placeholder="学号/工单类型号" onblur="add_checkUser();" />
+			</div>
+			<div class="weui_cell_ft"><i class="weui_icon_warn"></i></div>
+		</div>
+	</div>
+	<div class="weui_cell" id="cell_check" style="width: auto;float: left;margin-top: .2em;">
+		<div class="weui_cell_hd">
+			<label style="width: 5em;" class="weui_label">姓名校检:</label>
+		</div>
+		<div class="weui_cell_bd ">
+			<input class="weui_input" id="name" type="text" disabled="disabled" value="" style="color: #777;width: 5em;" />
+		</div>
+	</div>
+	<style type="text/css">
+		#cell_check:before {
+			border: none;
+		}
+	</style>
+	<button class="weui_btn weui_btn_mini weui_btn_plain_primary" style="float: right;padding: .3em 1em;margin-top: .5em;" onclick="add_openAS();">选择工单类型号</button>
+	<div class="fix_float"></div>
+</div>
+
+<br />
+
+<!--错误信息-->
+<div id="div_form">
+	<!--<form action="http://wts.sola.love/api/ticketsubmit" method="post">-->
+	<div class="weui_cells_title">详细信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div id="cell_code" class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label" style="width: 4em;">错误代码</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="text_code" class="weui_input" type="number" placeholder="如果没有,可以不填" />
+			</div>
+
+		</div>
+		<div id="cell_date" class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label" style="width: 4em;">出现时间</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="text_date" class="weui_input" type="date" placeholder="如果不记得,可以不选" />
+			</div>
+		</div>
+		<div id="cell_dec" class="weui_cell">
+			<div class="weui_cell_bd weui_cell_primary">
+				<textarea id="text_ori_desc" class="weui_textarea" placeholder="这个必须填一下哦~" style="height: 9em;"></textarea>
+			</div>
+			<div class="weui_cell_ft"><i class="weui_icon_warn"></i></div>
+		</div>
+	</div>
+	<input type="hidden" name="desc" id="desc" />
+	<button type="submit" id="btn_subtmit" class="weui_btn weui_btn_primary">添加报修</button>
+	<!--</form>-->
+
+</div>

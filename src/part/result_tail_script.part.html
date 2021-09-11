@@ -1,0 +1,12 @@
+<!--这个tail适用与不需要自动验证SToken的页面-->
+<!-- result.html xx.sub.html -->
+
+<script>
+//加载延时加载的Javascript
+if(window.NMLazyJs)
+	setTimeout(function(){
+		var p = NMLazyJs;
+		for(var i=0;i<p.length;i++)
+			NMJsLoader(p[i][1],p[i][0],p[i][2]);
+	},100);
+</script>

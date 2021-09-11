@@ -1,0 +1,9 @@
+<!--彩蛋-->
+<style id="style_egg"></style>
+<script type="text/javascript">
+	var ts = parseInt(new Date().getTime()/1000);
+	if(ts%53==1){
+		NMJsLoader('../egg/doge.js','egg_doge');
+		NMLoadCSS(style_egg,'../egg/doge.css','egg_doge');
+	}
+</script>

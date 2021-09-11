@@ -1,0 +1,30 @@
+<!-- 出错信息 -->
+<div id="page_error" class="hide" style="text-align: center; padding: 3em 1em;">
+	<i class="weui_icon_msg weui_icon_warn"></i>
+	<p style="color: #888;margin-top: 1em;font-size: 1.3em;">出错</p>
+</div>
+
+<button id="btn_last" class="weui_btn weui_btn_plain_default hide" style="margin-top: 1em;">上一页</button>
+
+<!-- 主显示区域 -->
+<div id="page_result" class="page" style="width: 100%;max-width: none;overflow-x: hidden;">
+	<!--Body-->
+	<div class="p_bg"></div>
+	<div id="base_item" class="weui_cell p_fg hide" data-tid="TicketID">
+		<!--Demo-->
+		<div class="weui_cell_hd">
+			<div class="ti_icon point"></div>
+		</div>
+		<div class="weui_cell_bd weui_cell_primary" style="max-width: 680px;">
+			<span class="ti_id yahei">ID</span>
+			<span class='ti_status yahei'>修后状态</span>
+			<span class='ti_name yahei'>修理人员</span>
+			<p class="ti_user">用户信息</p>
+			<p class="ti_desc">报修简述</p>
+			<p class="ti_remark">修理心得</p>
+		</div>
+		<div class="ti_time" class="weui_cell_ft">修理时间</div>
+	</div>
+</div>
+
+<button id="btn_next" class="weui_btn weui_btn_plain_primary">下一页</button>
