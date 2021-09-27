@@ -34,7 +34,7 @@ var getP = NMFunc.getURLParam;
 //字段的正则匹配式
 rule_user = [
 	/^1\d{10}$/g,//电
-	/^ZS(?:ZJLAN)?\d{10}@16900.gd$/g,//联
+	/^([0-9A-Za-z\-_\.]+)@16900.gd$/g,//联
 	/^1\d{10}@139.gd$/g,//移
 	/^\S+$/g];//其
 rule_room = /^[1-9]{1}\d{2,4}$/g;
