@@ -1,6 +1,6 @@
 //URL跳转
 
-var SOLA_DOMAIN 		= 'https://wwbx.zsxyww.htroy.com/api/';
+var SOLA_DOMAIN 		= 'https://wwbx.davisye.cn/api/';
 var SOLA_DOMAIN_ADMIN	= SOLA_DOMAIN + 'admin/'; 
 
 var exportParams =  {
